@@ -1,0 +1,7 @@
+@font-face {
+  font-family: 'coolveticaregular';
+  src: url('/static/themes/v1/fonts/coolvetica-webfont.eot');
+  src: url('/static/themes/v1/fonts/coolvetica-webfont.eot?#iefix') format("embedded-opentype"), url('/static/themes/v1/fonts/coolvetica-webfont.woff') format("woff"), url('/static/themes/v1/fonts/coolvetica-webfont.ttf') format("truetype"), url('/static/themes/v1/fonts/coolvetica-webfont.svg#coolveticaregular') format("svg");
+  font-weight: normal;
+  font-style: normal;
+}

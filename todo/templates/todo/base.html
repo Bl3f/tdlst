@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>TDLST</title>
+
+        {% block assets_css %}
+            <link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap.min.css" />
+            <link rel="stylesheet" href="{{ STATIC_URL }}themes/v1/css/style.css" />
+        {% endblock %}
+
+        {% block assets_js %}
+            <script type="text/javascript" src="{{ STATIC_URL }}js/jquery-2.0.3.min.js"></script>
+            <script type="text/javascript" src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
+            <script type="text/javascript" src="{{ STATIC_URL }}themes/v1/js/main.js"></script>
+        {% endblock %}
+    </head>
+
+    <body>
+        {% block content %}
+        {% endblock %}
+    </body>
+</html>

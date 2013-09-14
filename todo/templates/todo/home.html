@@ -1,0 +1,39 @@
+{% extends "todo/base.html" %}
+
+{% block content %}
+    <header>
+        <h1>tdlst</h1>
+        <h4>Don't forget the vowel</h4>
+
+        <nav>
+            <ul>
+                <li><a>login</a></li>
+                <li><a>one click register</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <header>
+            {{ todo.title }}
+        </header>
+        <article>
+            <ul>
+                {% for task in todo.tasks %}
+                    <label for="task_{{ task.pk }}">
+                        <li data-toggle-url="{% url "toggle" task_id=task.pk %}">
+                            <input id="task_{{ task.pk }}" type="checkbox" {% if not task.active %}checked{% endif %}>
+                            <p>{{ task.text }}</p>
+                            <a href="{% url "delete" task_id=task.pk %}"><span class="glyphicon glyphicon-trash"></span></a>
+                        </li>
+                    </label>
+                {% endfor %}
+            </ul>
+            <form method="POST" action="{% url "home" %}">
+                {% csrf_token %}
+                <input type="hidden" name="todo_id" value="{{ todo.pk }}">
+                <textarea id="new_task" name="task" placeholder="Type your task and press enter"></textarea>
+            </form>
+        </article>
+    </section>
+    {% include "todo/_partials/_td_aside.html" %}
+{% endblock %}

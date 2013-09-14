@@ -1,1 +1,7 @@
 .idea/
+tdlst/settings.py
+*.pyc
+todo/static/themes/ooi/js/
+todo/static/themes/ooi/css/
+.sass-cache/
+/static/

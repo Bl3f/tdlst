@@ -1,0 +1,144 @@
+@import "compass/css3/transition";
+@import "colors";
+@import "fonts";
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: $clouds;
+    color: $wet-asphalt;
+}
+
+a {
+    cursor: pointer;
+
+    &:hover {
+        color: $belize-hole;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'coolveticaregular';
+}
+
+header {
+    width: 200px;
+    margin: 50px 0 0px 70px;
+
+    h1, h4 {
+        margin: 0px;
+    }
+}
+
+aside {
+    width: 250px;
+    height: 100%;
+    padding: 50px 20px 0 20px;
+    position: fixed;
+    right: -300px;
+    top: 0;
+    border-left: 1px solid $wet-asphalt;
+    color: $concrete;
+    background-color: lighten($clouds, 4);
+
+    h1, h2, h3, h4, h5, h6 {
+        text-align: right;
+        margin-right: 15px;
+    }
+
+    span.glyphicon {
+        color: $wet-asphalt;
+    }
+}
+
+nav {
+    font-family: 'coolveticaregular';
+    font-size: 14px;
+    a {
+        color: $wet-asphalt;
+    }
+    ul {
+        padding: 0;
+        li {
+            list-style: none;
+        }
+    }
+}
+
+section {
+    width: 540px;
+    min-height: 300px;
+    margin: 0px auto 0 auto;
+    header {
+        width: 100%;
+        height: 35px;
+        font-size: 37px;
+        font-family: 'coolveticaregular';
+        margin: -45px 0;
+        background-color: $wet-asphalt;
+        color: $clouds;
+    }
+    article {
+        margin-top: 45px;
+        ul {
+            padding: 0px 0;
+            label {
+                display: inline-block;
+                margin-bottom: 0;
+                font-weight: normal;
+                width: 100%;
+                height: 40px;
+                line-height: 40px;
+                cursor: pointer;
+                &:nth-child(even) {
+                    background-color: #E0E0E0;
+                }
+                &:nth-child(odd) {
+                    background-color: $silver;
+                }
+                &:hover {
+                    background-color: transparent;
+                }
+            }
+            li {
+                list-style: none;
+                font-size: 1em;
+                & > input {
+                    float: left;
+                    left: 35px;
+                    top: 10px;
+                    position: relative;
+                }
+                p {
+                    width: 90%;
+                    text-align: right;
+                    display: inline-block;
+                }
+                span.glyphicon {
+                    margin-left: 10px;
+                    display: none;
+                    color: $wet-asphalt;
+                }
+                &:hover {
+                    span.glyphicon {
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+        textarea {
+            width: 100%;
+            resize: none;
+        }
+    }
+}
+
+.show-aside {
+    position: fixed;
+    top: 50px;
+    right: 50px;
+
+    span.glyphicon {
+        color: $wet-asphalt;
+    }
+}

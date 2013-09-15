@@ -13,6 +13,9 @@
             <script type="text/javascript" src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
             <script type="text/javascript" src="{{ STATIC_URL }}themes/v1/js/main.js"></script>
         {% endblock %}
+
+        {% load socketio_tags %}
+        {% socketio %}
     </head>
 
     <body>

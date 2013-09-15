@@ -6,6 +6,9 @@ from todo.views import home, toggle, delete
 # admin.autodiscover()
 
 urlpatterns = patterns('',
+                       url("",
+                           include('django_socketio.urls')),
+
                        url(r'^$',
                            home,
                            name='home'),

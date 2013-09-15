@@ -12,11 +12,11 @@
             </ul>
         </nav>
     </header>
-    <section>
+    <section id="todo-{{ todo.pk }}" class="todo" data-todo-id="{{ todo.pk }}">
         <header>
             {{ todo.title }}
         </header>
-        <article>
+        <article class="tasks">
             <ul>
                 {% for task in todo.tasks %}
                     <label for="task_{{ task.pk }}">
@@ -28,7 +28,7 @@
                     </label>
                 {% endfor %}
             </ul>
-            <form method="POST" action="{% url "home" %}">
+            <form id="task_form" method="POST" action="{% url "home" %}">
                 {% csrf_token %}
                 <input type="hidden" name="todo_id" value="{{ todo.pk }}">
                 <textarea id="new_task" name="task" placeholder="Type your task and press enter"></textarea>

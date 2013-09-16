@@ -22,7 +22,7 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = os.environ.get('SECRET_KEY', '4kdon8($1*c*5y(q&l&qgs&!febw=g!4t@i3jjtawu3cm#-ga_')
 
 ROOT_URLCONF = 'tdlst.urls'
 
